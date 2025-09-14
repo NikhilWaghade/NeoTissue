@@ -12,7 +12,7 @@ export default function ProductData1() {
     <div className="font-roboto">
       {/* 1️⃣ Hero Section - Full Width */}
       <section
-        className="relative h-[500px] flex items-center justify-center text-center text-white w-full"
+        className="relative h-[400px] md:h-[500px] flex items-center justify-center text-center text-white w-full"
         style={{
           backgroundImage: `url(${dataimg1})`,
           backgroundSize: "cover",
@@ -28,20 +28,20 @@ export default function ProductData1() {
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="relative z-10 text-5xl md:text-6xl font-bold px-4"
+          className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold px-4"
         >
           XSONX® Wound Hygiene System
         </motion.h1>
       </section>
 
       {/* 2️⃣ Intro Box - Full Width */}
-      <section className="w-full py-16 px-6">
+      <section className="w-full py-12 md:py-16 px-6">
         <motion.p
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto text-lg md:text-xl leading-relaxed text-white p-10 md:p-16 rounded-2xl text-center"
+          className="max-w-5xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed text-white p-6 sm:p-10 md:p-16 rounded-2xl text-center"
           style={{
             backgroundImage: "linear-gradient(to right, #ec4899, #8b5cf6)",
           }}
@@ -55,12 +55,12 @@ export default function ProductData1() {
         </motion.p>
       </section>
 
-      {/* 3️⃣ Key Benefits - Full Width */}
-      <section className="py-16 px-6 w-full  bg-[#eee]">
-        <h2 className="text-4xl font-bold text-center text-purple-900 mb-12">
+      {/* 3️⃣ Key Benefits */}
+      <section className="py-12 md:py-16 px-6 w-full bg-[#eee]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-purple-900 mb-10 md:mb-12">
           Key Benefits of XSONX®
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
           {[
             {
               img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/6764373d7f4cc78078d430bc_Frame%20(1).svg",
@@ -89,7 +89,7 @@ export default function ProductData1() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="p-8 py-14 border-2 text-center shadow-lg bg-white rounded-2xl"
+              className="p-6 md:p-8 py-10 md:py-14 border-2 text-center shadow-lg bg-white rounded-2xl"
               style={{
                 borderImage: "linear-gradient(90deg,#D9207C,#662D91) 1",
               }}
@@ -97,24 +97,26 @@ export default function ProductData1() {
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-16 h-16 mx-auto mb-4"
+                className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4"
               />
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                 {item.title}
               </h3>
-              <p className="mt-3 text-gray-600 text-sm">{item.desc}</p>
+              <p className="mt-2 md:mt-3 text-gray-600 text-sm sm:text-base">
+                {item.desc}
+              </p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* 4️⃣ Why Choose - Full Width */}
-      <section className="py-16 px-6 w-full bg-purple-900">
-        <h2 className="text-5xl font-bold text-center text-white mb-12">
+      {/* 4️⃣ Why Choose */}
+      <section className="py-12 md:py-16 px-6 w-full bg-purple-900">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-10 md:mb-12">
           Why Choose XSONX®
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto items-stretch">
           {/* Left Big Card */}
           <motion.div
             className="bg-white p-6 rounded-2xl shadow-lg flex flex-col justify-between"
@@ -125,13 +127,13 @@ export default function ProductData1() {
             <img
               src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/689d92b4e2089588693ae3c9_676346cda2a823e550c2454d_Device-and-white-heads-with-labels-p-1600.webp"
               alt="XSONX Product"
-              className="rounded-xl shadow-md w-full h-64 object-contain"
+              className="rounded-xl shadow-md w-full h-48 sm:h-64 object-contain"
             />
-            <div className="mt-6 space-y-3">
-              <h3 className="text-2xl font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+            <div className="mt-6 space-y-2 sm:space-y-3">
+              <h3 className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                 Comprehensive Wound Care
               </h3>
-              <p className="text-black leading-relaxed">
+              <p className="text-black text-sm sm:text-base leading-relaxed">
                 XSONX® is versatile, perfect for wound bed preparation prior to
                 tissue grafting or in operating rooms. It's ideal as a step-up
                 therapy for infected wounds and for routine maintenance to
@@ -141,21 +143,19 @@ export default function ProductData1() {
           </motion.div>
 
           {/* Right Side - 2 Cards */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 md:gap-8">
             {/* Card 1 */}
-            <motion.div className="bg-white p-6 rounded-2xl shadow-lg flex items-center gap-6">
-              {/* Left Side - Image */}
+            <motion.div className="bg-white p-6 rounded-2xl shadow-lg flex items-center gap-4 sm:gap-6">
               <img
                 src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/689d92f86bc8ea5aa8e8a1a6_6763489650faff381d75d8b3_Group%201-p-1600.webp"
                 alt="XSONX Kit"
-                className="rounded-xl shadow-md w-40 h-40 object-contain flex-shrink-0"
+                className="rounded-xl shadow-md w-28 h-28 sm:w-40 sm:h-40 object-contain flex-shrink-0"
               />
-              {/* Right Side - Text */}
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <div className="space-y-2 sm:space-y-3">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                   Reusable and Reimbursable
                 </h3>
-                <p className="text-black leading-relaxed">
+                <p className="text-black text-sm sm:text-base leading-relaxed">
                   The reusable handpiece and cost-effective single-use
                   woundheads make XSONX® an economically smart choice for
                   healthcare facilities.
@@ -164,19 +164,17 @@ export default function ProductData1() {
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div className="bg-white p-6 rounded-2xl shadow-lg flex items-center gap-6">
-              {/* Left Side - Image */}
+            <motion.div className="bg-white p-6 rounded-2xl shadow-lg flex items-center gap-4 sm:gap-6">
               <img
                 src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/676346dad6261adff1f2a4c1_Debridement-Head-Large-Detail-dots.png"
                 alt="Reusable Handpiece"
-                className="rounded-xl shadow-md w-40 h-40 object-contain flex-shrink-0"
+                className="rounded-xl shadow-md w-28 h-28 sm:w-40 sm:h-40 object-contain flex-shrink-0"
               />
-              {/* Right Side - Text */}
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <div className="space-y-2 sm:space-y-3">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                   Expert-Endorsed
                 </h3>
-                <p className="text-black leading-relaxed">
+                <p className="text-black text-sm sm:text-base leading-relaxed">
                   Noted medical professionals, including Drs. John Lantis and
                   Callie Horn, have recognized the tool's effectiveness in
                   enhancing early tissue engraftment and reducing patient pain
@@ -188,18 +186,15 @@ export default function ProductData1() {
         </div>
       </section>
 
-      {/* 5️⃣ Testimonials - Full Width */}
-      <section className="py-16 px-6 w-full bg-[#eee]">
-        <h2
-          className="text-5xl font-bold text-center mb-12 
-  bg-gradient-to-r from-pink-500 to-purple-700 bg-clip-text text-transparent"
-        >
+      {/* 5️⃣ Testimonials */}
+      <section className="py-12 md:py-16 px-6 w-full bg-[#eee]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 md:mb-12 bg-gradient-to-r from-pink-500 to-purple-700 bg-clip-text text-transparent">
           Testimonials
         </h2>
 
         <Swiper
           modules={[Navigation, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
           loop={true}
           navigation={true}
@@ -236,37 +231,39 @@ export default function ProductData1() {
             },
           ].map((item, i) => (
             <SwiperSlide key={i}>
-              <div className="h-full max-w- mx-auto text-center p-8  flex flex-col justify-center">
-                <p className="text-2xl italic text-black  mb-4">{item.quote}</p>
-                <h4 className="text-xl font-bold text-purple-900">
+              <div className="h-full max-w-3xl mx-auto text-center p-6 sm:p-8 flex flex-col justify-center">
+                <p className="text-base sm:text-lg md:text-2xl italic text-black mb-4">
+                  {item.quote}
+                </p>
+                <h4 className="text-lg sm:text-xl font-bold text-purple-900">
                   {item.name}
                 </h4>
-                <p className="text-sm text-gray-600">{item.role}</p>
+                <p className="text-xs sm:text-sm text-gray-600">{item.role}</p>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </section>
 
-      {/* 6️⃣ Call To Action - Full Width */}
-      <section className="py-16 flex justify-center w-full bg-gray-100">
+      {/* 6️⃣ Call To Action */}
+      <section className="py-12 md:py-16 flex justify-center w-full bg-gray-100">
         <div
-          className="p-20 px-40 rounded-2xl text-center text-white max-w-5xl w-full"
+          className="p-8 sm:p-12 md:p-20 rounded-2xl text-center text-white max-w-4xl w-full"
           style={{
             backgroundImage: "linear-gradient(135deg, #D9207C, #662D91)",
           }}
         >
-          <motion.h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <motion.h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Join the Future of Wound Care
           </motion.h2>
-          <p className="mb-8 text-lg">
-            Explore how XSONX® can transform your wound care practices
-            contacting us directly. For more information or to schedule a free
-            in-service, reach out to info@lifebiologicsusa.com.
+          <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg">
+            Explore how XSONX® can transform your wound care practices contacting
+            us directly. For more information or to schedule a free in-service,
+            reach out to info@lifebiologicsusa.com.
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-4 font-bold rounded-lg shadow text-white bg-gradient-to-r from-pink-500 to-purple-700 hover:opacity-90 transition"
+            className="inline-block px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-lg shadow text-white bg-gradient-to-r from-pink-500 to-purple-700 hover:opacity-90 transition"
           >
             Contact Us
           </a>

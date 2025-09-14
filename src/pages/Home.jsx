@@ -178,7 +178,8 @@ export default function Home() {
             className="space-y-6"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-purple-900 md:leading-tight">
-              Transforming <b className="text-black">  Wound Care</b> with Advanced Skin Substitutes
+              Transforming <b className="text-black"> Wound Care</b> with
+              Advanced Skin Substitutes
             </h2>
             <p className="text-gray-800 leading-relaxed">
               NeoTissue Biologics' advanced skin substitutes offer a
@@ -292,7 +293,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
               style={{
-                borderColor: "#ed1e79", // Customize per icon if needed
+                borderColor: "#ed1e79",
               }}
             >
               {/* Centered Image */}
@@ -305,16 +306,13 @@ export default function Home() {
                 />
               </div>
 
-              {/* Title with Roboto font */}
+              {/* Title with responsive font size */}
               <h3
-                className="mb-2"
+                className="mb-2 text-xl sm:text-2xl md:text-[32px] font-bold leading-snug"
                 style={{
                   fontFamily: "Roboto, sans-serif",
-                  fontSize: "32px",
-                  fontWeight: 700,
-                  lineHeight: "41.6px",
                   background: "linear-gradient(90deg, #ed1e79, #662d91)",
-                  WebkitBackgroundClip: "text", // Clips gradient to text
+                  WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
@@ -337,10 +335,10 @@ export default function Home() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 text-center md:text-left"
           >
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-black">
-              Transforming Placental <br />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-black">
+              Transforming Placental <br className="hidden sm:block" />
               tissue into{" "}
               <span
                 style={{
@@ -370,33 +368,33 @@ export default function Home() {
                 whileInView="show"
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="flex items-start space-x-4 p-4 py-8   transform transition rounded-lg relative"
+                className="flex items-start space-x-4 p-4 py-8 transform transition rounded-lg relative"
               >
                 {/* Left Side: Image + Border */}
-                <div className="flex flex-col items-center py-2 ">
+                <div className="flex flex-col items-center py-2">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-12 h-12 z-10 -mt-2"
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-12 md:h-12 z-10 -mt-2"
                   />
                   {/* Vertical border */}
-                  <div className="absolute top-16 left-8 mt-8 transform -translate-x-1/2 w-0.5 bg-black h-16"></div>
+                  <div className="absolute top-20 sm:top-24 left-8 mt-8 transform -translate-x-1/2 w-0.5 bg-black h-16"></div>
                 </div>
 
                 {/* Right Side: Heading and Paragraph */}
                 <div className="flex flex-col">
                   <h3
-                    className="text-xl font-bold text-black mb-2"
+                    className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2"
                     style={{
                       fontFamily: "Roboto, sans-serif",
-                      fontSize: "32px",
                       fontWeight: 700,
-                      lineHeight: "41.6px",
                     }}
                   >
                     {item.title}
                   </h3>
-                  <p className="text-gray-800">{item.desc}</p>
+                  <p className="text-gray-800 text-sm sm:text-base">
+                    {item.desc}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -421,14 +419,14 @@ export default function Home() {
               Discover Our Advanced Biologic Products
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto">
-              Life Biologics pioneers high-quality human amniotic tissue grafts
-              for advanced wound care.
+              Neotissue pioneers high-quality human amniotic tissue grafts for
+              advanced wound care.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* fifth section  */}
+      {/* six section  */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           {/* Left Content */}

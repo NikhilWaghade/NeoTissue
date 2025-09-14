@@ -6,7 +6,7 @@ export default function ContactUs() {
   return (
     <section>
       {/* ✅ Hero Section with Background Video */}
-      <section className="relative h-[600px] flex items-center px-6 md:px-16 overflow-hidden">
+      <section className="relative min-h-screen flex items-center px-6 md:px-16 overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -30,7 +30,9 @@ export default function ContactUs() {
             animate="show"
             className="text-4xl md:text-6xl font-bold leading-tight font-roboto"
           >
-            Get in Touch with <br /> Life Biologics
+            Get in Touch with <br />{" "}
+            <span className="text-pink-400">Neotissue </span>
+            biologics
           </motion.h1>
 
           <motion.p
@@ -40,9 +42,20 @@ export default function ContactUs() {
             transition={{ delay: 0.3 }}
             className="mt-6 text-lg md:text-xl"
           >
-            Have questions or need assistance? Our team is here to help with all
-            your inquiries about our advanced wound care solutions.
+            NeoTissue Biologics pioneers the use of Amniotic tissue to create
+            high-quality human amniotic tissue grafts for advanced wound care.
           </motion.p>
+
+          <motion.a
+            href="/products"
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            transition={{ delay: 0.6 }}
+            className="inline-block mt-8 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500  duration-300 rounded-lg text-lg font-medium hover:bg-pink-400 transition"
+          >
+            Our Products
+          </motion.a>
         </div>
       </section>
 
@@ -133,13 +146,8 @@ export default function ContactUs() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="p-10 md:p-12 lg:p-2 rounded-2xl"
+            className="p-4 sm:p-6 md:p-10 lg:p-12 rounded-2xl"
           >
-            {/* Heading */}
-            {/* <h1 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6">
-              Contact Us
-            </h1> */}
-
             {/* Form */}
             <form className="space-y-3">
               {/* Name */}
@@ -148,7 +156,7 @@ export default function ContactUs() {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full p-4 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
                 />
               </div>
 
@@ -160,7 +168,7 @@ export default function ContactUs() {
                 <input
                   type="number"
                   placeholder="Your Phone Number"
-                  className="w-full p-4 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
                 />
               </div>
 
@@ -170,7 +178,7 @@ export default function ContactUs() {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full p-4 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
                 />
               </div>
 
@@ -182,7 +190,7 @@ export default function ContactUs() {
                 <textarea
                   placeholder="Your Message"
                   rows="5"
-                  className="w-full p-4 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
                 ></textarea>
               </div>
 

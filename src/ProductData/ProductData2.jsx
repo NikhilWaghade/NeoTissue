@@ -50,17 +50,16 @@ export default function ProductData2() {
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="relative z-10 text-5xl md:text-6xl font-bold px-4"
+          className="relative z-10 text-3xl md:text-6xl font-bold px-4 leading-snug"
         >
-          Membrane Wrap™ - Advanced Amniotic Allograft
+          Membrane Wrap™ - Advanced <br /> Amniotic Allograft
         </motion.h1>
       </section>
 
       {/* Section 2: Left text, right image */}
       <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-1/2">
-          <h1 className="text-black text-5xl">
-            {" "}
+          <h1 className="text-black text-2xl md:text-5xl leading-snug">
             Membrane Wrap™ is a Dehydrated Dual-Layer Amniotic Tissue Allograft
             which serves as a wound cover or barrier protecting the wound from
             the environment.
@@ -73,7 +72,7 @@ export default function ProductData2() {
             className="rounded-xl shadow-lg"
           />
 
-          <p className="text-lg text-black mt-10">
+          <p className="text-base md:text-lg text-black mt-10 leading-relaxed">
             Membrane Wrap™ is a Dehydrated Dual-Layer Amniotic Tissue Allograft
             which serves as a wound cover or barrier protecting the wound from
             the environment. It is designed to maintain properties exhibited in
@@ -83,12 +82,12 @@ export default function ProductData2() {
         </div>
       </section>
 
-      {/* Section 3: 5 feature boxes with pink-purple gradient heading */}
+      {/* Section 3: Key Features */}
       <section className="py-16 bg-[#eee] px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700">
           Key Features
         </h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
           {featureBoxes.map((feature, idx) => (
             <div
               key={idx}
@@ -98,9 +97,9 @@ export default function ProductData2() {
                 <img
                   src={feature.img}
                   alt={feature.title}
-                  className="mx-auto mb-4 w-16 h-16"
+                  className="mx-auto mb-4 w-12 h-12 sm:w-16 sm:h-16"
                 />
-                <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700 text-3xl">
+                <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700 text-lg sm:text-xl md:text-2xl">
                   {feature.title}
                 </h3>
               </div>
@@ -111,58 +110,68 @@ export default function ProductData2() {
 
       {/* Section 4: Available Sizes table */}
       <section className="py-16 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-700 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-700 text-center">
           Available Sizes
         </h2>
-        <div className="flex justify-center">
+        <div className="flex justify-center overflow-x-auto">
           <table className="w-96 border border-purple-400 border-collapse text-left">
             <thead>
               <tr className="bg-purple-500 text-white">
-                <th className="py-4 px-6 font-semibold border border-purple-400">
+                <th className="py-3 px-4 sm:py-4 sm:px-6 font-semibold border border-purple-400">
                   Product Size
                 </th>
-                <th className="py-4 px-6 font-semibold border border-purple-400">
+                <th className="py-3 px-4 sm:py-4 sm:px-6 font-semibold border border-purple-400">
                   Units (SQCM)
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr className="bg-purple-100">
-                <td className="py-4 px-6 border border-purple-400 md:p-8">
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
                   2x2cm
                 </td>
-                <td className="py-4 px-6 border border-purple-400">4</td>
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
+                  4
+                </td>
               </tr>
               <tr className="bg-white">
-                <td className="py-4 px-6 border border-purple-400 md:p-8">
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
                   2x3cm
                 </td>
-                <td className="py-4 px-6 border border-purple-400">6</td>
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
+                  6
+                </td>
               </tr>
               <tr className="bg-purple-100">
-                <td className="py-4 px-6 border border-purple-400 md:p-8">
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
                   4x4cm
                 </td>
-                <td className="py-4 px-6 border border-purple-400">16</td>
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
+                  16
+                </td>
               </tr>
               <tr className="bg-white">
-                <td className="py-4 px-6 border border-purple-400 md:p-8">
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
                   4x6cm
                 </td>
-                <td className="py-4 px-6 border border-purple-400">24</td>
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
+                  24
+                </td>
               </tr>
               <tr className="bg-purple-100">
-                <td className="py-4 px-6 border border-purple-400 md:p-8">
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
                   4x8cm
                 </td>
-                <td className="py-4 px-6 border border-purple-400">32</td>
+                <td className="py-3 px-4 sm:py-4 sm:px-6 border border-purple-400">
+                  32
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      {/* section 5 KeyBenefits  */}
+      {/* Section 5: KeyBenefits */}
       <KeyBenefits />
     </div>
   );

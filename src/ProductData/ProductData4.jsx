@@ -45,7 +45,7 @@ export default function ProductData4() {
       <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Left Side Text */}
         <div className="md:w-1/2">
-          <p className="text-5xl text-black">
+          <p className="text-2xl md:text-5xl text-black">
             Tri-Membrane Wrap™ is a triple-layer Amnion-Chorion-Amnion allograft
             which serves as a wound cover or barrier, protecting the wound from
             the environment.
@@ -56,10 +56,10 @@ export default function ProductData4() {
         <div className="md:w-1/2 flex flex-col items-center">
           <img
             src={productImg3}
-            alt="Simplimax Product"
+            alt="Tri-Membrane Product"
             className="rounded-xl shadow-lg mb-6"
           />
-          <p className="text-lg text-black text-center">
+          <p className="text-sm md:text-lg text-black text-center">
             Tri-Membrane Wrap™ is a triple-layer Amnion-Chorion-Amnion human
             tissue allograft that may serve as a barrier and protective covering
             for wounds. Through minimal manipulation, the allograft aims to
@@ -73,7 +73,7 @@ export default function ProductData4() {
 
       {/* Section 3: Key Features */}
       <section className="py-16 bg-gray-100 px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700">
           Key Features
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -88,7 +88,7 @@ export default function ProductData4() {
                   alt={feature.title}
                   className="mx-auto mb-4 w-16 h-16"
                 />
-                <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700 text-3xl">
+                <h3 className="font-bold text-xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700">
                   {feature.title}
                 </h3>
               </div>
@@ -99,11 +99,11 @@ export default function ProductData4() {
 
       {/* Section 4: Available Sizes */}
       <section className="py-16 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-700 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-700 text-center">
           Available Sizes
         </h2>
         <div className="flex justify-center">
-          <table className="w-96 border border-purple-400 border-collapse text-left">
+          <table className="w-72 md:w-96 border border-purple-400 border-collapse text-left text-sm md:text-base">
             <thead>
               <tr className="bg-purple-500 text-white">
                 <th className="py-4 px-6 font-semibold border border-purple-400">
@@ -150,7 +150,7 @@ export default function ProductData4() {
         </div>
       </section>
 
-      {/* section 5  */}
+      {/* Section 5 */}
       <KeyBenefits />
     </div>
   );

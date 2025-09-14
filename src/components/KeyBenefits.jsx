@@ -12,7 +12,7 @@ export default function KeyBenefits() {
     >
       {/* ✅ Logos Row */}
       <motion.div
-        className="flex justify-center items-center gap-10 flex-wrap mb-8"
+        className="flex flex-row justify-center items-center gap-4 md:gap-10 mb-8 flex-wrap"
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
@@ -21,23 +21,23 @@ export default function KeyBenefits() {
         <img
           src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/663dd9b49046e7cb70e4a236_Group%207.svg"
           alt="Unmatched Selection"
-          className="h-40 w-auto"
+          className="h-20 w-auto sm:h-28 md:h-40"
         />
         <img
           src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/663dd9b5dc3f9a383ae3fe43_Group%206.svg"
           alt="Reimbursement Support"
-          className="h-40 w-auto"
+          className="h-20 w-auto sm:h-28 md:h-40"
         />
         <img
           src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/663dd9babeed414c07bd2af1_Group%205.svg"
           alt="Educational Resources"
-          className="h-40 w-auto"
+          className="h-20 w-auto sm:h-28 md:h-40"
         />
       </motion.div>
 
       {/* ✅ Text Line */}
       <motion.p
-        className="max-w-3xl mx-auto text-lg md:text-xl text-gray-700 mb-8"
+        className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 mb-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}

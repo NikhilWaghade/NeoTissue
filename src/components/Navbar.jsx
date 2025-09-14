@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // hamburger & close icons
+import { Menu, X } from "lucide-react"; 
 import logo from "../assets/logobg1.png";
 
 export default function Navbar() {
@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 w-full z-50 bg-transparent text-white px-6 py-3 flex justify-between items-center">
       {/* Logo */}
       <Link to="/" className="flex items-center">
-        <img src={logo} alt="logo" className="w-44 md:w-60 " />
+        <img src={logo} alt="logo" className="w-44 md:w-60 -ml-6 " />
       </Link>
 
       {/* Desktop Navigation */}

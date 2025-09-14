@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className=" bg-white text-white py-10 px-6">
+    <footer className="bg-white text-white py-10 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Top: Logo */}
-        <div className="flex items-center justify-center space-x-4 mb-6">
+        <div className="flex items-center justify-center mb-6">
           <Link to="/">
-            <img src={logo} alt="NeoTissueBio Logo" className="w-96 " />
+            <img src={logo} alt="NeoTissueBio Logo" className="w-72 md:w-96" />
           </Link>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-wrap justify-center gap-6 mb-6 text-black">
+        <div className="flex flex-col items-center space-y-3 sm:flex-row sm:flex-wrap sm:justify-center sm:space-y-0 sm:gap-6 mb-6 text-black text-center">
           <Link to="/" className="hover:underline font-bold">
             Home
           </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
         ></div>
 
         {/* Bottom Text */}
-        <div className="flex justify-between text-sm px-2 md:px-0 text-black">
+        <div className="flex flex-col sm:flex-row justify-between text-sm px-2 md:px-0 text-black text-center sm:text-left gap-2">
           <p>© 2025 NeotissueBio All rights reserved.</p>
           <p>Designed and developed by Exceelup.</p>
         </div>
