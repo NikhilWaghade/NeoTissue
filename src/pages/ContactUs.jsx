@@ -89,7 +89,7 @@ export default function ContactUs() {
                 For general inquiries, email us at:
               </p>
               <p className="font-semibold text-purple-900">
-                Info@neotissue.com
+                Care@NeoTissuebio.com
               </p>
             </div>
 
@@ -123,7 +123,7 @@ export default function ContactUs() {
               </svg>
               <h2 className="text-xl font-bold text-purple-900">Call</h2>
               <p className="text-gray-700">For urgent matters, call us at:</p>
-              <p className="font-semibold text-purple-900">(123) 456-7890</p>
+              <p className="font-semibold text-purple-900">+1-800-232-5156</p>
             </div>
           </div>
 

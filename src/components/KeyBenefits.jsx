@@ -42,7 +42,7 @@ export default function KeyBenefits() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Contact Life Biologics today to explore their curated selection of
+        Contact Neotissue Biologics today to explore their curated selection of
         advanced tissue products and discover how they can elevate your
         wound care practice.
       </motion.p>

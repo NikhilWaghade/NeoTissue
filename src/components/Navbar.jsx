@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 w-full z-50 bg-transparent text-white px-6 py-3 flex justify-between items-center">
       {/* Logo */}
       <Link to="/" className="flex items-center">
-        <img src={logo} alt="logo" className="w-44 md:w-60 h-16 md:h-24" />
+        <img src={logo} alt="logo" className="w-44 md:w-60 " />
       </Link>
 
       {/* Desktop Navigation */}

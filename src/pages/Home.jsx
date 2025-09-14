@@ -144,7 +144,7 @@ export default function Home() {
             transition={{ delay: 0.3 }}
             className="mt-6 text-lg md:text-xl"
           >
-            Life Biologics pioneers the use of Amniotic tissue to create
+            NeoTissue Biologics pioneers the use of Amniotic tissue to create
             high-quality human amniotic tissue grafts for advanced wound care.
           </motion.p>
 
@@ -163,12 +163,12 @@ export default function Home() {
 
       {/* Features Section */}
       <section
-        className="py-16 px-6"
+        className="py-10 md:py-20 px-6"
         style={{
           backgroundImage: "linear-gradient(90deg, #ffdeed, #e3bdff)",
         }}
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Left Side Text */}
           <motion.div
             variants={fadeUp}
@@ -177,14 +177,14 @@ export default function Home() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-900">
-              Transforming Wound Care with Advanced Skin Substitutes
+            <h2 className="text-3xl md:text-5xl font-bold text-purple-900 md:leading-tight">
+              Transforming <b className="text-black">  Wound Care</b> with Advanced Skin Substitutes
             </h2>
             <p className="text-gray-800 leading-relaxed">
-              Life Biologics' advanced skin substitutes offer a breakthrough
-              solution for patients and healthcare providers. With our
-              high-quality human amniotic tissue, we provide cutting-edge wound
-              care treatments that deliver superior outcomes.
+              NeoTissue Biologics' advanced skin substitutes offer a
+              breakthrough solution for patients and healthcare providers. With
+              our high-quality human amniotic tissue, we provide cutting-edge
+              wound care treatments that deliver superior outcomes.
             </p>
 
             <ul className="space-y-4 text-gray-900 font-medium">
@@ -269,11 +269,12 @@ export default function Home() {
             whileInView="show"
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
+            className="px-4 sm:px-12"
           >
             <img
               src={features_img}
               alt="Wound Care"
-              className="rounded-lg shadow-xl hover:scale-105 transition h-[400px] w-full object-cover"
+              className="rounded-lg shadow-xl hover:scale-105 transition w-full h-auto max-h-[400px] object-cover"
             />
           </motion.div>
         </div>
@@ -281,7 +282,7 @@ export default function Home() {
 
       {/* third section  */}
       <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
           {features.map((item, i) => (
             <motion.div
               key={i}
@@ -369,17 +370,17 @@ export default function Home() {
                 whileInView="show"
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="flex items-start space-x-4 p-4 hover:shadow-lg transform transition rounded-lg relative"
+                className="flex items-start space-x-4 p-4 py-8   transform transition rounded-lg relative"
               >
                 {/* Left Side: Image + Border */}
-                <div className="flex flex-col items-center relative">
+                <div className="flex flex-col items-center py-2 ">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-12 h-12 z-10"
+                    className="w-12 h-12 z-10 -mt-2"
                   />
                   {/* Vertical border */}
-                  <div className="absolute top-14 left-1/2 transform -translate-x-1/2 w-0.5 bg-black h-full"></div>
+                  <div className="absolute top-16 left-8 mt-8 transform -translate-x-1/2 w-0.5 bg-black h-16"></div>
                 </div>
 
                 {/* Right Side: Heading and Paragraph */}
@@ -416,7 +417,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-black leading-snug">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white leading-snug">
               Discover Our Advanced Biologic Products
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto">

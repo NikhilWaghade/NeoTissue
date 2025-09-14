@@ -35,7 +35,7 @@ export default function Team() {
           animate="show"
           className="text-4xl md:text-5xl font-extrabold text-black"
         >
-          The People Behind Life <br /> Biologics
+          The People Behind Neotissue <br /> Biologics
         </motion.h1>
         <motion.p
           variants={fadeUp}

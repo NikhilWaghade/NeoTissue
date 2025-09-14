@@ -33,47 +33,58 @@ export default function Products() {
               {
                 title: "Xsonx® Wound Hygiene",
                 desc: "XSONX® Wound Hygiene System – Advanced Wound Care Technology",
+                link: "/productData1 ",
               },
               {
                 title: "Membrane Wrap",
                 desc: "Membrane Wrap™ – Dual-Layer Amniotic Tissue Allograft",
+                link: "/ProductData2",
               },
               {
                 title: "Simplimax",
                 desc: "Simplimax™ – Dual Layer Amniotic Allograft for Wound Care",
+                link: "/ProductData3",
               },
               {
                 title: "Tri-Membrane Wrap",
                 desc: "Tri-Membrane Wrap™ – Triple-Layer Amniotic Tissue Allograft",
+                link: "/ProductData4",
               },
               {
                 title: "XCELL Amnio Matrix",
                 desc: "XCELL Amnio Matrix™ – Lyophilized Amniotic Allograft",
+                link: "/ProductData5",
               },
               {
                 title: "Activate",
                 desc: "Activate™ – Full Thickness Placental Allograft for Wound Care",
+                link: "/ProductData6",
               },
-              {
-                title: "Amnio AMP-MP",
-                desc: "Amnio AMP-MP™ – Dual Layer Amniotic Allograft for Healing",
-              },
-              {
-                title: "AmchoPlast",
-                desc: "AmchoPlast™ - Dehydrated Full-Thickness Placental Tissue Allograft",
-              },
-              {
-                title: "Esano ACA",
-                desc: "Esano ACA™ – Triple-Layer Placental Allograft for Wound Care",
-              },
-              {
-                title: "Membrane Wrap Hydro",
-                desc: "Membrane Wrap Hydro™ – Pre-Hydrated Amniotic Tissue Allograft",
-              },
-              {
-                title: "XCEED TL Matrix™",
-                desc: "XCEED TL Matrix™ – Dehydrated Amnion-Chorion-Amnion Allograft",
-              },
+              // {
+              //   title: "Amnio AMP-MP",
+              //   desc: "Amnio AMP-MP™ – Dual Layer Amniotic Allograft for Healing",
+              //   link: "/products/amnio-amp",
+              // },
+              // {
+              //   title: "AmchoPlast",
+              //   desc: "AmchoPlast™ - Dehydrated Full-Thickness Placental Tissue Allograft",
+              //   link: "/products/amchoplast",
+              // },
+              // {
+              //   title: "Esano ACA",
+              //   desc: "Esano ACA™ – Triple-Layer Placental Allograft for Wound Care",
+              //   link: "/products/esano-aca",
+              // },
+              // {
+              //   title: "Membrane Wrap Hydro",
+              //   desc: "Membrane Wrap Hydro™ – Pre-Hydrated Amniotic Tissue Allograft",
+              //   link: "/products/membrane-hydro",
+              // },
+              // {
+              //   title: "XCEED TL Matrix™",
+              //   desc: "XCEED TL Matrix™ – Dehydrated Amnion-Chorion-Amnion Allograft",
+              //   link: "/products/xceed-tl",
+              // },
             ].map((product, i) => (
               <motion.div
                 key={i}
@@ -91,14 +102,19 @@ export default function Products() {
                   <p className="mt-4 text-sm bg-purple-50 p-3 rounded-lg text-gray-700">
                     {product.desc}
                   </p>
-                  {/* ✅ Center button */}
-                  <motion.button
+                  {/* ✅ Link button */}
+                  <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-32 mx-auto mt-6 px-4 py-2 rounded-lg text-white font-semibold border-2 border-transparent bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500"
+                    className="w-32 mx-auto mt-6"
                   >
-                    Learn More
-                  </motion.button>
+                    <Link
+                      to={product.link}
+                      className="block text-center px-4 py-2 rounded-lg text-white font-semibold border-2 border-transparent bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500"
+                    >
+                      Learn More
+                    </Link>
+                  </motion.div>
                 </div>
               </motion.div>
             ))}
@@ -106,7 +122,7 @@ export default function Products() {
         </div>
 
         {/* ✅ Image Section */}
-       <KeyBenefits/>
+        <KeyBenefits />
       </div>
     </div>
   );
