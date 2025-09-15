@@ -423,45 +423,64 @@ export default function Home() {
       {/* six section  */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
-            <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700">
+          {/* Left Content - stagger animation */}
+          <div className="space-y-6">
+            {/* Heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700"
+            >
               Amniotic
               <br />
-            </h2>
-            <p className="text-gray-800 leading-relaxed">
+            </motion.h2>
+
+            {/* Paragraph */}
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-gray-800 leading-relaxed"
+            >
               Find answers to common questions about amniotic tissue grafts and
               learn more about their benefits for wound care.
-            </p>
+            </motion.p>
 
-            {/* ✅ Contact button with extra top margin */}
-            <div className="mt-20">
+            {/* Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-20"
+            >
               <Link
                 to={"/contact"}
                 className="px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-700 text-white font-semibold rounded-lg hover:scale-105 transition"
               >
                 Contact Us
               </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* Right FAQ Content */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-4"
           >
             {faqs.map((faq, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative p-4 rounded-xl cursor-pointer hover:shadow-lg transition"
                 onClick={() => toggleFAQ(index)}
                 style={{
@@ -486,7 +505,7 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M19 28H13C12.4697 27.9995 11.9613 27.7886 11.5864 27.4136C11.2114 27.0387 11.0005 26.5303 11 26V21H6C5.46973 20.9995 4.96133 20.7886 4.58637 20.4136C4.21141 20.0387 4.00053 19.5303 4 19V13C4.00053 12.4697 4.21141 11.9613 4.58637 11.5864C4.96133 11.2114 5.46973 11.0005 6 11H11V6C11.0005 5.46973 11.2114 4.96133 11.5864 4.58637C11.9613 4.21141 12.4697 4.00053 13 4H19C19.5303 4.00053 20.0387 4.21141 20.4136 4.58637C20.7886 4.96133 20.9995 5.46973 21 6V11H26C26.5303 11.0005 27.0387 11.2114 27.4136 11.5864C27.7886 11.9613 27.9995 12.4697 28 13V19C27.9992 19.5302 27.7882 20.0384 27.4133 20.4133C27.0384 20.7882 26.5302 20.9992 26 21H21V26C20.9992 26.5302 20.7882 27.0384 20.4133 27.4133C20.0384 27.7882 19.5302 27.9992 19 28ZM6 13V19H13V26H19V19H26V13H19V6H13V13H6Z"
+                        d="M19 28H13C12.4697 27.9995 11.9613 27.7886 11.5864 27.4136C11.2114 27.0387 11.0005 26.5303 11 26V21H6C5.46973 20.9995 4.96133 20.7886 4.58637 20.4136C4.21141 20.0387 4.00053 19.5303 4 19V13C4.00053 12.4697 4.21141 11.9613 4.58637 11.5864C4.96133 11.2114 5.46973 11.0005 6 11H11V6C11.0005 5.46973 11.2114 4.96133 11.5864 4.58637C11.9613 4.21141 12.4697 4.00053 13 4H19C19.5303 4.00053 20.0387 4.21141 20.4136 4.58637C20.7886 4.9613 20.9995 5.46973 21 6V11H26C26.5303 11.0005 27.0387 11.2114 27.4136 11.5864C27.7886 11.9613 27.9995 12.4697 28 13V19C27.9992 19.5302 27.7882 20.0384 27.4133 20.4133C27.0384 20.7882 26.5302 20.9992 26 21H21V26C20.9992 26.5302 20.7882 27.0384 20.4133 27.4133C20.0384 27.7882 19.5302 27.9992 19 28ZM6 13V19H13V26H19V19H26V13H19V6H13V13H6Z"
                         fill="url(#paint0_linear_4_113)"
                       ></path>
                       <defs>
@@ -509,15 +528,15 @@ export default function Home() {
                 {/* Answer - Toggle */}
                 {activeIndex === index && (
                   <motion.p
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
                     className="mt-2 text-gray-700 pl-2"
                   >
                     {faq.answer}
                   </motion.p>
                 )}
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
