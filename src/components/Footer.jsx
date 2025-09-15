@@ -27,12 +27,6 @@ export default function Footer() {
           <Link to="/contact" className="hover:underline font-bold">
             Contact Us
           </Link>
-          <Link to="#privacy" className="hover:underline">
-            Privacy Policy
-          </Link>
-          <Link to="#terms" className="hover:underline">
-            Terms & Conditions
-          </Link>
         </div>
 
         {/* Divider with gradient */}
@@ -45,8 +39,18 @@ export default function Footer() {
 
         {/* Bottom Text */}
         <div className="flex flex-col sm:flex-row justify-between text-sm px-2 md:px-0 text-black text-center sm:text-left gap-2">
+          {/* Links */}
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+            <Link to="#privacy" className="hover:underline">
+              Privacy Policy
+            </Link>
+            <Link to="#terms" className="hover:underline">
+              Terms & Conditions
+            </Link>
+          </div>
+
+          {/* Copyright */}
           <p>© 2025 Neotissue All rights reserved.</p>
-          <p>Designed and developed by Exceelup.</p>
         </div>
       </div>
     </footer>
