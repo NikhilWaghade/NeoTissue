@@ -259,7 +259,7 @@ export default function ProductData1() {
           <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg">
             Explore how XSONX® can transform your wound care practices contacting
             us directly. For more information or to schedule a free in-service,
-            reach out to info@lifebiologicsusa.com.
+            reach out to Care@NeoTissuebio.com.
           </p>
           <a
             href="/contact"

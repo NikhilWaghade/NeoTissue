@@ -11,33 +11,34 @@ import {
   FaHandsHelping,
 } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const features = [
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65dd7b4488cf6395814e2f88_Frame.svg",
       title: "Cutting-edge Human Amniotic Tissue Grafts",
-      desc: "Life Biologics' tissue are highly biocompatible, easy to use, and effective in wound healing.",
+      desc: "Neotissue are highly biocompatible, easy to use, and effective in wound healing.",
     },
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65dd7b44b84f8c6a2962c8e3_Frame-1.svg",
       title: "Cutting-Edge Wound Care Solutions",
-      desc: "Life Biologics' tissue provide advanced treatment options for patients in need of wound care.",
+      desc: "Neotissue provide advanced treatment options for patients in need of wound care.",
     },
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65dd7b4475462a6c7f120a89_Frame-2.svg",
       title: "Enhance Wound Healing with Life Biologics",
-      desc: "Life Biologics' tissue are designed to enhance the natural wound healing process.",
+      desc: "Neotissue are designed to enhance the natural wound healing process.",
     },
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65de29be3840fbb886f8d7dd_Frame.svg",
       title: "Streamlining Reimbursement",
-      desc: "Life Biologics' provides fast reimbursement support for healthcare providers.",
+      desc: "Neotissue provides fast reimbursement support for healthcare providers.",
     },
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65de29bef87cfe044c5d271b_Frame-1.svg",
       title: "Learning and Academic Pursuits",
-      desc: "Life Biologics' offers educational resources, patient information, and clinical applications.",
+      desc: "Neotissue offers educational resources, patient information, and clinical applications.",
     },
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65df6a9e003911b97babc298_Frame%20(1).svg",
@@ -51,7 +52,7 @@ export default function Home() {
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65dd7209916442c31dd8f5b1_Frame.svg",
       title: "Streamlined Process",
-      desc: "Life Biologics takes Placental tissue and uses advanced techniques to create high-quality grafts.",
+      desc: "Neotissue  takes Placental tissue and uses advanced techniques to create high-quality grafts.",
     },
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65dd72097a91d9431c70cf6e_Frame-1.svg",
@@ -144,8 +145,8 @@ export default function Home() {
             transition={{ delay: 0.3 }}
             className="mt-6 text-lg md:text-xl"
           >
-            NeoTissue Biologics pioneers the use of Amniotic tissue to create
-            high-quality human amniotic tissue grafts for advanced wound care.
+            NeoTissue pioneers the use of Amniotic tissue to create high-quality
+            tissue grafts for advanced wound care.
           </motion.p>
 
           <motion.a
@@ -182,10 +183,10 @@ export default function Home() {
               Advanced Skin Substitutes
             </h2>
             <p className="text-gray-800 leading-relaxed">
-              NeoTissue Biologics' advanced skin substitutes offer a
-              breakthrough solution for patients and healthcare providers. With
-              our high-quality human amniotic tissue, we provide cutting-edge
-              wound care treatments that deliver superior outcomes.
+              NeoTissue advanced skin substitutes offer a breakthrough solution
+              for patients. With our high-quality human amniotic tissue, we
+              provide cutting-edge wound care treatments that deliver superior
+              outcomes.
             </p>
 
             <ul className="space-y-4 text-gray-900 font-medium">
@@ -445,9 +446,16 @@ export default function Home() {
               Find answers to common questions about amniotic tissue grafts and
               learn more about their benefits for wound care.
             </p>
-            <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-700 text-white font-semibold rounded-lg hover:scale-105 transition">
-              Contact Us
-            </button>
+
+            {/* ✅ Contact button with extra top margin */}
+            <div className="mt-20">
+              <Link
+                to={"/contact"}
+                className="px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-700 text-white font-semibold rounded-lg hover:scale-105 transition"
+              >
+                Contact Us
+              </Link>
+            </div>
           </motion.div>
 
           {/* Right FAQ Content */}

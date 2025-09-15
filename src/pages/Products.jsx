@@ -60,31 +60,31 @@ export default function Products() {
                 desc: "Activate™ – Full Thickness Placental Allograft for Wound Care",
                 link: "/ProductData6",
               },
-              // {
-              //   title: "Amnio AMP-MP",
-              //   desc: "Amnio AMP-MP™ – Dual Layer Amniotic Allograft for Healing",
-              //   link: "/products/amnio-amp",
-              // },
-              // {
-              //   title: "AmchoPlast",
-              //   desc: "AmchoPlast™ - Dehydrated Full-Thickness Placental Tissue Allograft",
-              //   link: "/products/amchoplast",
-              // },
-              // {
-              //   title: "Esano ACA",
-              //   desc: "Esano ACA™ – Triple-Layer Placental Allograft for Wound Care",
-              //   link: "/products/esano-aca",
-              // },
-              // {
-              //   title: "Membrane Wrap Hydro",
-              //   desc: "Membrane Wrap Hydro™ – Pre-Hydrated Amniotic Tissue Allograft",
-              //   link: "/products/membrane-hydro",
-              // },
-              // {
-              //   title: "XCEED TL Matrix™",
-              //   desc: "XCEED TL Matrix™ – Dehydrated Amnion-Chorion-Amnion Allograft",
-              //   link: "/products/xceed-tl",
-              // },
+              {
+                title: "Amnio AMP-MP",
+                desc: "Amnio AMP-MP™ – Dual Layer Amniotic Allograft for Healing",
+                link: "/ProductData7",
+              },
+              {
+                title: "AmchoPlast",
+                desc: "AmchoPlast™ - Dehydrated Full-Thickness Placental Tissue Allograft",
+                link: "/ProductData8",
+              },
+              {
+                title: "Esano ACA",
+                desc: "Esano ACA™ – Triple-Layer Placental Allograft for Wound Care",
+                link: "/ProductData9",
+              },
+              {
+                title: "Membrane Wrap Hydro",
+                desc: "Membrane Wrap Hydro™ – Pre-Hydrated Amniotic Tissue Allograft",
+                link: "/ProductData10",
+              },
+              {
+                title: "XCEED TL Matrix™",
+                desc: "XCEED TL Matrix™ – Dehydrated Amnion-Chorion-Amnion Allograft",
+                link: "/ProductData11",
+              },
             ].map((product, i) => (
               <motion.div
                 key={i}

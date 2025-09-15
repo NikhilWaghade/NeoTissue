@@ -32,7 +32,7 @@ export default function ContactUs() {
           >
             Get in Touch with <br />{" "}
             <span className="text-pink-400">Neotissue </span>
-            biologics
+            
           </motion.h1>
 
           <motion.p
@@ -42,7 +42,7 @@ export default function ContactUs() {
             transition={{ delay: 0.3 }}
             className="mt-6 text-lg md:text-xl"
           >
-            NeoTissue Biologics pioneers the use of Amniotic tissue to create
+            NeoTissue pioneers the use of Amniotic tissue to create
             high-quality human amniotic tissue grafts for advanced wound care.
           </motion.p>
 

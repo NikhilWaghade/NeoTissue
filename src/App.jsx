@@ -11,6 +11,11 @@ import ProductData3 from "./ProductData/ProductData3";
 import ProductData4 from "./ProductData/ProductData4";
 import ProductData5 from "./ProductData/ProductData5";
 import ProductData6 from "./ProductData/ProductData6";
+import ProductData7 from "./ProductData/ProductData7";
+import ProductData8 from "./ProductData/productData8";
+import ProductData9 from "./ProductData/ProductData9";
+import ProductData10 from "./ProductData/ProductData10";
+import ProductData11 from "./ProductData/ProductData11";
 
 function App() {
   return (
@@ -29,6 +34,11 @@ function App() {
         <Route path="/ProductData4" element={<ProductData4 />} />
         <Route path="/ProductData5" element={<ProductData5 />} />
         <Route path="/ProductData6" element={<ProductData6 />} />
+        <Route path="/ProductData7" element={<ProductData7 />} />
+        <Route path="/ProductData8" element={<ProductData8 />} />
+        <Route path="/ProductData9" element={<ProductData9 />} />
+        <Route path="/ProductData10" element={<ProductData10 />} />
+        <Route path="/ProductData11" element={<ProductData11 />} />
       </Routes>
       <Footer />
     </div>

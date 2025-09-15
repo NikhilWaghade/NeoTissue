@@ -45,7 +45,7 @@ export default function Footer() {
 
         {/* Bottom Text */}
         <div className="flex flex-col sm:flex-row justify-between text-sm px-2 md:px-0 text-black text-center sm:text-left gap-2">
-          <p>© 2025 NeotissueBio All rights reserved.</p>
+          <p>© 2025 Neotissue All rights reserved.</p>
           <p>Designed and developed by Exceelup.</p>
         </div>
       </div>
