@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../utils/animations";
-import bg_video from "../assets/bg_video.mp4";
+import bg_video from "../assets/bg_video3.mp4";
 import features_img from "../assets/features_img.png";
 import {
   FaHeartbeat,
