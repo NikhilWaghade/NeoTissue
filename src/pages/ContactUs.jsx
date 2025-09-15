@@ -46,16 +46,7 @@ export default function ContactUs() {
             high-quality human amniotic tissue grafts for advanced wound care.
           </motion.p>
 
-          <motion.a
-            href="/products"
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            transition={{ delay: 0.6 }}
-            className="inline-block mt-8 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500  duration-300 rounded-lg text-lg font-medium hover:bg-pink-400 transition"
-          >
-            Our Products
-          </motion.a>
+        
         </div>
       </section>
 
