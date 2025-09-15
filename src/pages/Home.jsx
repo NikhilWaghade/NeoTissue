@@ -27,7 +27,7 @@ export default function Home() {
     },
     {
       img: "https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/65dd7b4475462a6c7f120a89_Frame-2.svg",
-      title: "Enhance Wound Healing with Life Biologics",
+      title: "Enhance Wound Healing with Neotissue",
       desc: "Neotissue are designed to enhance the natural wound healing process.",
     },
     {
