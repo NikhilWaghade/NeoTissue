@@ -127,38 +127,31 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 max-w-2xl text-left text-white">
-          <motion.h1
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="text-4xl md:text-6xl font-bold leading-tight font-roboto"
+            transition={{ staggerChildren: 0.3 }}
+            className="space-y-6"
           >
-            Revolutionizing <br />{" "}
-            <span className="text-pink-400">wound care</span> with advanced
-            biologics
-          </motion.h1>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight font-roboto">
+              Revolutionizing <br />
+              <span className="text-pink-400">wound care</span> with advanced
+              biologics
+            </h1>
 
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            transition={{ delay: 0.3 }}
-            className="mt-6 text-lg md:text-xl"
-          >
-            NeoTissue pioneers the use of Amniotic tissue to create high-quality
-            tissue grafts for advanced wound care.
-          </motion.p>
+            <p className="text-lg md:text-xl">
+              NeoTissue pioneers the use of Amniotic tissue to create
+              high-quality tissue grafts for advanced wound care.
+            </p>
 
-          <motion.a
-            href="/products"
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            transition={{ delay: 0.6 }}
-            className="inline-block mt-8 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500  duration-300 rounded-lg text-lg font-medium hover:bg-pink-400 transition"
-          >
-            Our Products
-          </motion.a>
+            <Link
+              to={"/products"}
+              className="inline-block mt-8 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500 duration-300 rounded-lg text-lg font-medium hover:bg-pink-400 transition"
+            >
+              Our Products
+            </Link>
+          </motion.div>
         </div>
       </section>
 
