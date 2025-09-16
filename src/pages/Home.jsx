@@ -2,14 +2,7 @@ import { motion } from "framer-motion";
 import { fadeUp } from "../utils/animations";
 import bg_video from "../assets/bg_video4.mp4";
 import features_img from "../assets/features_img.png";
-import {
-  FaHeartbeat,
-  FaUserMd,
-  FaBook,
-  FaClipboardList,
-  FaLayerGroup,
-  FaHandsHelping,
-} from "react-icons/fa";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -109,7 +102,7 @@ export default function Home() {
   return (
     <main className="bg-gradient-to-br from-purple-900 to-pink-700 text-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-6 md:px-16 overflow-hidden">
+      <section className="relative min-h-screen flex items-center px-4 sm:px-6 md:px-10 xl:px-0 overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -126,38 +119,42 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-2xl text-left text-white">
+        <div className="relative z-10 max-w-7xl mx-auto w-full text-left text-white">
           <motion.div
             variants={fadeUp}
             initial="hidden"
             animate="show"
             transition={{ staggerChildren: 0.3 }}
-            className="space-y-6"
+            className="w-full text-left flex flex-col items-start justify-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight font-roboto">
+            <h1 className="text-4xl md:text-5xl xl:text-7xl  lg:leading font-medium font-roboto max-w-3xl mt-8 xl:mt-16">
               Revolutionizing <br />
-              <span className="text-pink-400">wound care</span> with advanced
-              biologics
+              <span className="text-pink-400 font-semibold">
+                wound care
+              </span>{" "}
+              with advanced biologics
             </h1>
 
-            <p className="text-lg md:text-xl">
-              NeoTissue pioneers the use of Amniotic tissue to create
-              high-quality tissue grafts for advanced wound care.
+            <p className="text-lg md:text-xl max-w-2xl mb-16 mt-4 font-roboto">
+              NeoTissue pioneers the use of Amniotic tissue to create high
+              quality tissue grafts for advanced wound care.
             </p>
 
-            <Link
-              to={"/products"}
-              className="inline-block mt-8 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500 duration-300 rounded-lg text-lg font-medium hover:bg-pink-400 transition"
-            >
-              Our Products
-            </Link>
+            <div>
+              <Link
+                to="/products"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500 duration-300 rounded-lg text-lg font-medium hover:bg-pink-400 transition"
+              >
+                Our Products
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
       <section
-        className="py-10 md:py-20 px-6"
+        className="py-12 md:py-24 px-6"
         style={{
           backgroundImage: "linear-gradient(90deg, #ffdeed, #e3bdff)",
         }}
@@ -172,10 +169,10 @@ export default function Home() {
             className="space-y-6"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-purple-900 md:leading-tight">
-              Transforming <b className="text-black"> Wound Care</b> with
+              Transforming <span className="text-black"> Wound Care</span> with
               Advanced Skin Substitutes
             </h2>
-            <p className="text-gray-800 leading-relaxed">
+            <p className="text-gray-800 leading-relaxed ">
               NeoTissue advanced skin substitutes offer a breakthrough solution
               for patients. With our high-quality human amniotic tissue, we
               provide cutting-edge wound care treatments that deliver superior
@@ -276,12 +273,12 @@ export default function Home() {
       </section>
 
       {/* third section  */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-12 md:py-24 px-3 sm:px-6 md:px-10 xl:px-0 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
           {features.map((item, i) => (
             <motion.div
               key={i}
-              className="p-6 border rounded-lg shadow hover:shadow-lg hover:-translate-y-2 transform transition flex flex-col items-center text-center"
+              className="p-6 borde rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transform transition flex flex-col items-center text-center bg-white"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -302,7 +299,7 @@ export default function Home() {
 
               {/* Title with responsive font size */}
               <h3
-                className="mb-2 text-xl sm:text-2xl md:text-[32px] font-bold leading-snug"
+                className="mb-2 text-xl md:text-2xl  font-bold leading-snug mt-4"
                 style={{
                   fontFamily: "Roboto, sans-serif",
                   background: "linear-gradient(90deg, #ed1e79, #662d91)",
@@ -321,8 +318,8 @@ export default function Home() {
       </section>
 
       {/* fourth section  */}
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+      <section className="py-12 md:py-24 px-3 sm:px-6 md:px-10 xl:px-0 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           {/* Left Side Text */}
           <motion.div
             variants={fadeUp}
@@ -331,7 +328,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="space-y-6 text-center md:text-left"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold lg:leading-tight text-black xl:mt-8">
               Transforming Placental <br className="hidden sm:block" />
               tissue into{" "}
               <span
@@ -365,14 +362,14 @@ export default function Home() {
                 className="flex items-start space-x-4 p-4 py-8 transform transition rounded-lg relative"
               >
                 {/* Left Side: Image + Border */}
-                <div className="flex flex-col items-center py-2">
+                <div className="flex flex-col items-center ">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-12 md:h-12 z-10 -mt-2"
+                    className="w-16 sm:w-20 md:w-12 z-10 "
                   />
                   {/* Vertical border */}
-                  <div className="absolute top-20 sm:top-24 left-8 mt-8 transform -translate-x-1/2 w-0.5 bg-black h-16"></div>
+                  <div className="absolute top-20 sm:top-24 left-8 transform -translate-x-1/2 w-0.5 bg-black h-16"></div>
                 </div>
 
                 {/* Right Side: Heading and Paragraph */}
@@ -380,7 +377,7 @@ export default function Home() {
                   <h3
                     className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2"
                     style={{
-                      fontFamily: "Roboto, sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                       fontWeight: 700,
                     }}
                   >
@@ -397,10 +394,10 @@ export default function Home() {
       </section>
 
       {/* fifth section  */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-10 sm:py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto rounded-3xl">
           <motion.div
-            className="rounded-3xl text-white text-center shadow-lg px-6 py-12 md:px-12 md:py-20 lg:px-32 lg:py-28 xl:px-48"
+            className="rounded-3xl text-white text-center shadow-lg px-4 py-12 md:px-12 md:py-20 lg:px-32 lg:py-28 xl:px-48"
             style={{
               background: "linear-gradient(90deg, #ed1e79, #662d91)",
             }}
@@ -412,7 +409,7 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white leading-snug">
               Discover Our Advanced Biologic Products
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-white max-w-xl mx-auto">
               Neotissue pioneers high-quality human amniotic tissue grafts for
               advanced wound care.
             </p>
@@ -421,20 +418,19 @@ export default function Home() {
       </section>
 
       {/* six section  */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+      <section className="py-12 md:py-24 px-3 sm:px-6 md:px-10 xl:px-0 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           {/* Left Content - stagger animation */}
-          <div className="space-y-6">
+          <div className="">
             {/* Heading */}
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700"
+              className="text-4xl xl:text-5xl font-bold text-black"
             >
               Amniotic
-              <br />
             </motion.h2>
 
             {/* Paragraph */}
@@ -443,7 +439,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-gray-800 leading-relaxed"
+              className="text-gray-800 leading-relaxed mt-4 max-w-xl"
             >
               Find answers to common questions about amniotic tissue grafts and
               learn more about their benefits for wound care.
@@ -491,7 +487,7 @@ export default function Home() {
               >
                 <div className="flex items-center justify-between">
                   {/* Question */}
-                  <h4 className="text-lg font-bold text-black">
+                  <h4 className="text-lg font-semibold text-black">
                     {faq.question}
                   </h4>
 
@@ -531,7 +527,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="mt-2 text-gray-700 pl-2"
+                    className="mt-2 text-gray-700 text-sm"
                   >
                     {faq.answer}
                   </motion.p>

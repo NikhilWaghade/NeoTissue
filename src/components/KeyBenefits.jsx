@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function KeyBenefits() {
   return (
     <motion.section
-      className="py-32 px-6 text-center bg-gray-100"
+      className="md:py-24 py-16 px-3 sm:px-6 md:px-10 xl:px-0 text-center bg-gray-100"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -21,30 +21,30 @@ export default function KeyBenefits() {
         <img
           src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/663dd9b49046e7cb70e4a236_Group%207.svg"
           alt="Unmatched Selection"
-          className="h-20 w-auto sm:h-28 md:h-40"
+          className="w-20 sm:w-28 md:w-40"
         />
         <img
           src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/663dd9b5dc3f9a383ae3fe43_Group%206.svg"
           alt="Reimbursement Support"
-          className="h-20 w-auto sm:h-28 md:h-40"
+          className="w-20 sm:w-28 md:w-40"
         />
         <img
           src="https://cdn.prod.website-files.com/65dd69e5c5c0b3458916abfc/663dd9babeed414c07bd2af1_Group%205.svg"
           alt="Educational Resources"
-          className="h-20 w-auto sm:h-28 md:h-40"
+          className="w-20 sm:w-28 md:w-40"
         />
       </motion.div>
 
       {/* ✅ Text Line */}
       <motion.p
-        className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 mb-8"
+        className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 md:my-16 my-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Contact Neotissue today to explore their curated selection of
-        advanced tissue products and discover how they can elevate your
-        wound care practice.
+        Contact Neotissue today to explore their curated selection of advanced
+        tissue products and discover how they can elevate your wound care
+        practice.
       </motion.p>
 
       {/* ✅ Button */}

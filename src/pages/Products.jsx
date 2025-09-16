@@ -17,17 +17,18 @@ export default function Products() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-black">
+          <h1 className="text-3xl md:text-5xl xl:text-6xl font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-black">
             Advanced Wound Care <br /> Products
           </h1>
-          <p className="mt-6 text-lg md:text-xl p-6 rounded-2xl">
-            Our revolutionary biologic products and services tailored for <br />
+          <p className="mt-6 text-lg md:text-xl p-6 rounded-2xl text-gray-800">
+            Our revolutionary biologic products and services tailored for{" "}
+            <br className="hidden md:block" />
             enhanced wound care and superior patient outcomes.
           </p>
         </motion.div>
 
         {/* ✅ Product Cards Section */}
-        <div className="px-8 -mt-12 py-20 sm:px-12 lg:px-16">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-10 xl:px-0  py-12 md:py-20">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 bg-white">
             {[
               {
@@ -95,11 +96,11 @@ export default function Products() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
                 {/* ✅ Inner white box */}
-                <div className="h-full p-14 bg-white rounded-2xl flex flex-col justify-between">
+                <div className="h-full p-6 md:p-8 bg-white rounded-2xl flex flex-col justify-between items-center">
                   <h3 className="text-xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                     {product.title}
                   </h3>
-                  <p className="mt-4 text-sm bg-purple-50 p-3 rounded-lg text-gray-700">
+                  <p className="mt-4 text-sm bg-purple-50 p-3 rounded-lg text-gray-700 text-center">
                     {product.desc}
                   </p>
                   {/* ✅ Link button */}

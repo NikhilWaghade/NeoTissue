@@ -18,7 +18,7 @@ export default function Team() {
       desc: "Provides strategic leadership and drives the company’s mission across all divisions.",
     },
     {
-      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/6752086d91c0a38fa318e3cf_664131efcf250cf6a072e85a_Man.svg",
+      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/67520b0b183137ea66cbb69f_673e55664903f84c9817dd09_avatar.svg",
       name: "Rivka S",
       role: "Chief Financial Officer (CFO)",
       desc: "Manages corporate finance, compliance, and investor relations.",
@@ -26,13 +26,13 @@ export default function Team() {
 
     // Medical & Clinical Affairs
     {
-      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/67520b0b183137ea66cbb69f_673e55664903f84c9817dd09_avatar.svg",
+      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/6752086d91c0a38fa318e3cf_664131efcf250cf6a072e85a_Man.svg",
       name: "Dr. Daniel Cohen",
       role: "Chief Medical Officer (CMO)",
       desc: "Leads clinical strategy, medical oversight, and patient outcome optimization.",
     },
     {
-      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/6752086d91c0a38fa318e3cf_664131efcf250cf6a072e85a_Man.svg",
+      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/67520b0b183137ea66cbb69f_673e55664903f84c9817dd09_avatar.svg",
       name: "Dr. Rebecca Martinez",
       role: "Director of Clinical Research",
       desc: "Manages clinical trials, safety studies, and regulatory submissions.",
@@ -58,7 +58,7 @@ export default function Team() {
       desc: "Oversees sales team performance and territory expansion.",
     },
     {
-      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/6752086d91c0a38fa318e3cf_664131efcf250cf6a072e85a_Man.svg",
+      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/67520b0b183137ea66cbb69f_673e55664903f84c9817dd09_avatar.svg",
       name: "Melissa Brown",
       role: "Regional Account Manager",
       desc: "Manages key hospital accounts and wound care clinic relationships.",
@@ -66,13 +66,13 @@ export default function Team() {
 
     // Operations & Compliance
     {
-      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/67520b0b183137ea66cbb69f_673e55664903f84c9817dd09_avatar.svg",
+      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/6752086d91c0a38fa318e3cf_664131efcf250cf6a072e85a_Man.svg",
       name: "Jonathan Weiss",
       role: "Director of Operations",
       desc: "Oversees logistics, procurement, and distribution of skin substitute products.",
     },
     {
-      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/6752086d91c0a38fa318e3cf_664131efcf250cf6a072e85a_Man.svg",
+      img: "https://cdn.prod.website-files.com/6751ff02c163292790bd16bf/67520b0b183137ea66cbb69f_673e55664903f84c9817dd09_avatar.svg",
       name: "Sophia Chen",
       role: "Quality & Regulatory Affairs Manager",
       desc: "Ensures FDA compliance, quality control, and regulatory documentation.",
@@ -106,7 +106,7 @@ export default function Team() {
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="text-4xl md:text-5xl font-extrabold text-black"
+          className="text-4xl md:text-5xl font-semibold text-black mt-10 lg:mt-20"
         >
           The People Behind Neotissue <br />
         </motion.h1>
@@ -115,15 +115,15 @@ export default function Team() {
           initial="hidden"
           animate="show"
           transition={{ delay: 0.2 }}
-          className="mt-6 text-lg md:text-2xl text-gray-800 max-w-3xl mx-auto"
+          className="mt-6 text-lg md:text-2xl text-gray-800 max-w-xl mx-auto"
         >
-          The dedicated professionals pioneering breakthroughs in advanced{" "}
-          <br /> wound care.
+          The dedicated professionals pioneering breakthroughs in advanced wound
+          care.
         </motion.p>
       </section>
 
       {/* ✅ Team Grid */}
-      <section className="p-10 max-w-7xl mx-auto text-center">
+      <section className="py-12 md:py-24 max-w-7xl mx-auto text-center">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
           {teamMembers.map((member, i) => (
             <motion.div

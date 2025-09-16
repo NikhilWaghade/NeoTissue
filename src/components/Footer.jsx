@@ -4,27 +4,31 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-white py-8 px-6">
-      <div className="max-w-6xl mx-auto">
+    <footer className="bg-white text-white py-12 md:py-24 px-3 sm:px-6 md:px-10 xl:px-0">
+      <div className="max-w-7xl mx-auto">
         {/* Top: Logo */}
-        <div className="flex items-center justify-center mb-10">
+        <div className="flex items-center justify-center mb-12 md:mb-20">
           <Link to="/">
-            <img src={logo} alt="NeoTissueBio Logo" className="w-72 md:w-96" />
+            <img
+              src={logo}
+              alt="NeoTissueBio Logo"
+              className="w-64 sm:w-72 xl:w-80"
+            />
           </Link>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col items-center space-y-3 sm:flex-row sm:flex-wrap sm:justify-center sm:space-y-0 sm:gap-6 -mt-16 text-black text-center ">
-          <Link to="/" className="hover:underline font-bold">
+        <div className="flex flex-col items-center space-y-3 sm:flex-row sm:flex-wrap sm:justify-center sm:space-y-0 sm:gap-6 text-black text-center font-roboto">
+          <Link to="/" className="hover:underline font-semibold">
             Home
           </Link>
-          <Link to="/products" className="hover:underline font-bold">
+          <Link to="/products" className="hover:underline font-semibold">
             Products
           </Link>
-          <Link to="/team" className="hover:underline font-bold">
+          <Link to="/team" className="hover:underline font-semibold">
             Team
           </Link>
-          <Link to="/contact" className="hover:underline font-bold">
+          <Link to="/contact" className="hover:underline font-semibold">
             Contact Us
           </Link>
         </div>
@@ -38,9 +42,14 @@ export default function Footer() {
         ></div>
 
         {/* Bottom Text */}
-        <div className="flex flex-col sm:flex-row justify-between text-sm px-2 md:px-0 text-black text-center sm:text-left gap-2">
+        <div className="flex flex-col-reverse sm:flex-row justify-between items-center text-sm px-2 md:px-0 text-neutral-500 font-roboto gap-2">
           {/* Links */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+
+          {/* Copyright */}
+          <p className="text-neutral-500">
+            © 2025 Neotissue All rights reserved.
+          </p>
+          <div className="flex flex-row gap-8 sm:gap-4">
             <Link to="#privacy" className="hover:underline">
               Privacy Policy
             </Link>
@@ -48,9 +57,6 @@ export default function Footer() {
               Terms & Conditions
             </Link>
           </div>
-
-          {/* Copyright */}
-          <p>© 2025 Neotissue All rights reserved.</p>
         </div>
       </div>
     </footer>

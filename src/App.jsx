@@ -16,10 +16,12 @@ import ProductData8 from "./ProductData/productData8";
 import ProductData9 from "./ProductData/ProductData9";
 import ProductData10 from "./ProductData/ProductData10";
 import ProductData11 from "./ProductData/ProductData11";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
     <div className="bg-white text-gray-900">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../utils/animations";
 import bg_video from "../assets/bg_video4.mp4";
+import FormWrapper from "../components/FormWrapper";
+import Input from "../components/Input";
+import { contactFormSchema } from "../schemas";
 
 export default function ContactUs() {
   return (
     <section>
       {/* ✅ Hero Section with Background Video */}
-      <section className="relative min-h-screen flex items-center px-6 md:px-16 overflow-hidden">
+      <section className="relative min-h-screen flex items-center px-3 sm:px-6 md:px-10 xl:px-0 overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -23,16 +26,15 @@ export default function ContactUs() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-2xl text-left text-white">
+        <div className="relative z-10 max-w-7xl mx-auto text-left text-white flex flex-col items-start justify-start w-full">
           <motion.h1
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="text-4xl md:text-6xl font-bold leading-tight font-roboto"
+            className="text-4xl md:text-6xl font-semibold leading-tight font-roboto"
           >
             Get in Touch with <br />{" "}
             <span className="text-pink-400">Neotissue </span>
-            
           </motion.h1>
 
           <motion.p
@@ -40,13 +42,11 @@ export default function ContactUs() {
             initial="hidden"
             animate="show"
             transition={{ delay: 0.3 }}
-            className="mt-6 text-lg md:text-xl"
+            className="mt-6 text-lg md:text-xl max-w-xl"
           >
-            NeoTissue pioneers the use of Amniotic tissue to create
-            high-quality human amniotic tissue grafts for advanced wound care.
+            NeoTissue pioneers the use of Amniotic tissue to create high-quality
+            human amniotic tissue grafts for advanced wound care.
           </motion.p>
-
-        
         </div>
       </section>
 
@@ -88,7 +88,9 @@ export default function ContactUs() {
                   </linearGradient>
                 </defs>
               </svg>
-              <h2 className="text-xl font-bold text-purple-900">Email</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-purple-900">
+                Email
+              </h2>
               <p className="text-gray-700">
                 For general inquiries, email us at:
               </p>
@@ -125,7 +127,9 @@ export default function ContactUs() {
                   </linearGradient>
                 </defs>
               </svg>
-              <h2 className="text-xl font-bold text-purple-900">Call</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-purple-900">
+                Call
+              </h2>
               <p className="text-gray-700">For urgent matters, call us at:</p>
               <p className="font-semibold text-purple-900">+1-800-232-5156</p>
             </div>
@@ -137,59 +141,48 @@ export default function ContactUs() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="p-4 sm:p-6 md:p-10 lg:p-12 rounded-2xl"
+            className="sm:p-6 md:p-10 lg:p-12 rounded-2xl"
           >
             {/* Form */}
-            <form className="space-y-3">
-              {/* Name */}
-              <div className="flex flex-col">
-                <label className="mb-2 font-medium text-gray-700">Name*</label>
-                <input
-                  type="text"
+            <FormWrapper
+              schema={contactFormSchema}
+              submitBtn="Send Message"
+              successMsg="Thank you for contacting NeoTissueBio! We'll get back to you soon."
+            >
+              <div className="space-y-4">
+                {/* Name */}
+                <Input
+                  name="name"
+                  label="Name*"
                   placeholder="Your Name"
-                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  type="text"
                 />
-              </div>
 
-              {/* Phone */}
-              <div className="flex flex-col">
-                <label className="mb-2 font-medium text-gray-700">
-                  Phone Number*
-                </label>
-                <input
-                  type="number"
+                {/* Phone */}
+                <Input
+                  name="phone"
+                  label="Phone Number*"
                   placeholder="Your Phone Number"
-                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  type="tel"
                 />
-              </div>
 
-              {/* Email */}
-              <div className="flex flex-col">
-                <label className="mb-2 font-medium text-gray-700">Email*</label>
-                <input
-                  type="email"
+                {/* Email */}
+                <Input
+                  name="email"
+                  label="Email*"
                   placeholder="Your Email"
-                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  type="email"
+                />
+
+                {/* Message */}
+                <Input
+                  name="message"
+                  label="Message*"
+                  placeholder="Your Message"
+                  type="text"
                 />
               </div>
-
-              {/* Message */}
-              <div className="flex flex-col">
-                <label className="mb-2 font-medium text-gray-700">
-                  Message*
-                </label>
-                <textarea
-                  placeholder="Your Message"
-                  rows="5"
-                  className="w-full p-3 border-2 border-gray-500 rounded-lg focus:outline-none focus:border-purple-500 transition"
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <button className="w-28 px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-500 transition text-lg">
-                Submit
-              </button>
-            </form>
+            </FormWrapper>
           </motion.div>
         </div>
       </section>
