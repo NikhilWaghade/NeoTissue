@@ -27,7 +27,7 @@ const FormWrapper = ({
   // FUNCTIONS
   const sendMail = async (formData) => {
     try {
-      const response = await fetch(`${SERVER_DOMAIN}/email/send-mail`, {
+      const response = await fetch(`${SERVER_DOMAIN}/send-mail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
