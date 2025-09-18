@@ -50,10 +50,10 @@ export default function Footer() {
             © 2025 Neotissue All rights reserved.
           </p>
           <div className="flex flex-row gap-8 sm:gap-4">
-            <Link to="#privacy" className="hover:underline">
+            <Link to="/privacy-policy" className="hover:underline">
               Privacy Policy
             </Link>
-            <Link to="#terms" className="hover:underline">
+            <Link to="/termscondition" className="hover:underline">
               Terms & Conditions
             </Link>
           </div>

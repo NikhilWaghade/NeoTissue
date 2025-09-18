@@ -17,6 +17,8 @@ import ProductData9 from "./ProductData/ProductData9";
 import ProductData10 from "./ProductData/ProductData10";
 import ProductData11 from "./ProductData/ProductData11";
 import ScrollToTop from "./utils/ScrollToTop";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsConditions from "./components/TermsConditionsl";
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<ContactUs />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/termscondition" element={<TermsConditions />} />
 
         {/* products data routes  */}
         <Route path="/productData1" element={<ProductData1 />} />
